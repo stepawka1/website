@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+/*---------------------------------------login-----------------------*/
+a { 
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+   } 
+
+#links a{
+	font-size: 40px;
+	background-color: red;
+	text-align: right;
+	padding: 20px;
+}
+
+
+#login_header{
+	height: 50vh;
+	background-color: #1c1a26;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------*/
+body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;}
+.contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif;}
+.form_hint, .required_notification {font-size: 11px;}
+*:focus {outline: none;}
+
+
+.contact_form h2 {
+ margin:0;
+ display: inline;
+}
+.required_notification {
+ color:#d45252;
+ margin:5px 0 0 0;
+ display:inline;
+ float:right;
+}
+
+.contact_form li:first-child, .contact_form li:last-child {
+ border-bottom:1px solid #777;
+}
+
+.contact_form ul {
+    width:750px;
+    list-style-type:none;
+    list-style-position:outside;
+    margin:0px;
+    padding:0px;
+}
+.contact_form li{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    position:relative;
+}
+
+.contact_form label {
+ width:150px;
+ margin-top: 3px;
+ display:inline-block;
+ float:left;
+ padding:3px;
+}
+.contact_form input {
+ height:20px;
+ width:220px;
+ padding:5px 8px;
+}
+.contact_form textarea {padding:8px; width:300px;}
+.contact_form button {margin-left:156px;}
+
+.contact_form input, .contact_form textarea {
+ border:1px solid #aaa;
+ box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+ border-radius:2px;
+}
+.contact_form input:focus, .contact_form textarea:focus {
+ background: #fff;
+ border:1px solid #555;
+ box-shadow: 0 0 3px #aaa;
+}
+
+#form_picture {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+/* Button Style */
+button.submit {
+ background-color: #68b12f;
+ background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+ background: -webkit-linear-gradient(top, #68b12f, #50911e);
+ background: -moz-linear-gradient(top, #68b12f, #50911e);
+ background: -ms-linear-gradient(top, #68b12f, #50911e);
+ background: -o-linear-gradient(top, #68b12f, #50911e);
+ background: linear-gradient(top, #68b12f, #50911e);
+ border: 1px solid #509111;
+ border-bottom: 1px solid #5b992b;
+ border-radius: 3px;
+ -webkit-border-radius: 3px;
+ -moz-border-radius: 3px;
+ -ms-border-radius: 3px;
+ -o-border-radius: 3px;
+ box-shadow: inset 0 1px 0 0 #9fd574;
+ -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+ -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+ -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+ -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+ color: white;
+ font-weight: bold;
+ padding: 6px 20px;
+ text-align: center;
+ text-shadow: 0 -1px 0 #396715;
+}
+button.submit:hover {
+ opacity:.85;
+ cursor: pointer;
+}
+button.submit:active {
+ border: 1px solid #20911e;
+ box-shadow: 0 0 10px 5px #356b0b inset;
+ -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+ -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+ -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+ -o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
+
+.contact_form input:focus, .contact_form textarea:focus { /* add this to the already existing style */
+ padding-right:70px;
+}
+
+.contact_form input, .contact_form textarea { /* add this to the already existing style */
+ -moz-transition: padding .25s;
+ -webkit-transition: padding .25s;
+ -o-transition: padding .25s;
+ transition: padding .25s;
+}
+
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid { /* when a field is considered invalid by the browser */
+    background: #fff no-repeat 98% center;
+    box-shadow: 0 0 5px #000;
+    border-color: #b03535
+}
+
+.contact_form input:required:valid, .contact_form textarea:required:valid { /* when a field is considered valid by the browser */
+    background: #fff  no-repeat 98% center;
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+
+input:required {
+	border: 1px solid red;
+}
+input:required, textarea:required {
+    background: #fff  no-repeat 98% center;
+}
+.contact_form input, .contact_form textarea {
+    padding-right:30px;
+}
+
+.contact_form input, .contact_form textarea { /* add this to the already existing style */
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+    -o-transition: padding .25s;
+    transition: padding .25s;
+}
+
+::-webkit-input-placeholder {
+    color: blue;
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+
+#login_main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100vh;
+}
+
+#login_main input{
+	margin: 5px;
+}
+#login_main h2{
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: left;
+	color: #754274;
+	margin-left: 5px;
+}
+
+/*-----------------------------------singup-----------------------*/
+#singup_header{
+	height: 50vh;
+	background-color: white;
+}
+
+#singup h2 {
+	text-align: right;
+}
+
+
+#singup_main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100vh;
+}
+
+#lsingup_main input{
+	margin: 5px;
+}
+#singup_main h2{
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: left;
+	color: #754274;
+	margin-left: 5px;
+}
+
+/* ----------------------------main ------------------------*/
+
+#main_div{
+	background-color: #fffaf7;
+	display: flex;
+	min-height: 1000px;
+}
+
+#main_left{
+	background-color: #2F4F4F;
+	width: 15%;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#main_center {
+	min-height: 100%;
+	width: 65%;
+}
+#main_right {
+	background-color: 	#2F4F4F;
+	width: 20%;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------*/
+
+.contanier{
+
+	display: flex;
+	flex-direction: row;
+	background-color: #305a17;
+
+	margin-left:auto;
+	margin-right: auto;
+
+}
+.contanier h1{
+	background-image: url(http://www.render911.ru/upload/resize_cache/iblock/730/200_200_2/7301db4d3d11d52b6901447820b634cf.jpg);
+	text-align: center;
+	font-size:25px;
+	height: 38px;
+	font-family: "AnonymousPro",arial;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+.contanier_row{
+	
+	width: inherit;
+	
+/* 	border: 2px solid navy; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top:20px;
+	margin-bottom: 20px;
+}
+/*
+.product{
+	width: 250px;
+		height: 500px;
+		display: flex;
+		margin-bottom:auto;
+		margin-top:auto;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;		
+}*/
+
+.img{
+	width: 100%;
+	height: 400px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	border-radius: 20px;
+	
+	
+}
+
+/*
+
+		IMURGES
+
+*/
+
+#garderob{
+	background-image: url(https://pp.userapi.com/c824603/v824603732/195294/CpW51hwbbh0.jpg);
+}
+.productRow{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	
+	flex-wrap: wrap;
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	/*align-items: center;*/
+	margin-top:25px;
+	margin-right: auto;
+	margin-left: auto;
+	
+	width: 210px;
+	height: 300px;
+}
+.productImg{
+	width: 200px;
+	height: 150px;
+}
+.productPrice {
+	display: inline;
+	text-align:right;
+	margin-top: 5px;
+	color:#4c4e54;
+
+}
+.productHeader {
+	font-family: 'Noto Serif', serif;
+	text-align: center;
+	font-size: 20px;
+	padding:10px,5px;
+	margin-top:10px;
+}
+.productQuantity {}
+
+.imgPage{
+	width: 100%;
+	align-content: center;
+	margin-top:30px;
+}
+.productDecription {
+	text-align: left;
+	margin-top:20px;
+	padding-left:40px;
+	padding-right:40px;
+}
+.pageLabel{
+	text-align: center;
+	margin-top: 20px;
+	font-size: 50px;
+}
+.mark{
+	text-align: right;
+
+}
+
+/*---------------------------------------------Изменение поста---------------------------------------------------------------*/
+
+#changePageLabel {
+
+	height: 60px;
+	font-size: 50px;
+	text-align: center;
+	background-color: #fffaf7;
+	border: 0px; 
+}
+#changePageDesc {
+	background-color: #fffaf7;
+	border: 0px; 
+}
+
+#main_right a {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  transition: .3s;
+}
+#main_right a:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46,229,157,.4);
+  color: white;
+  transform: translateY(-7px);
+}
+.productHeader {
+  font-family: 'Merriweather', serif;
+  position: relative;
+  color: #FCF2E5;
+  background: #2F4F4F;
+  font-size: 2.5em;
+  font-weight: normal;
+  width:57%;
+  padding: 10px 40px;
+  display: inline-block;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+.productHeader:before {
+  content: ""; 
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: -15px;
+  background: #90806A;
+}
+.productHeader:after {
+  content: ""; 
+  position: absolute;
+  height: 0;
+  width: 80%;
+  border-top: 10px solid #90806A;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+}
+
+.username {
+  background: #FFF4ED;
+  margin-top:25px;
+  text-align: center;
+}
+.username h1 {
+  font-family: 'Righteous', cursive;
+  position: relative;
+  color: #3CA1D9; 
+  display: inline-block;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  font-size: 3em;
+  padding: 11px 60px;
+  margin: 0; 
+  line-height: 1;
+}
+.username h1:before, .username h1:after {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  background: repeating-linear-gradient(180deg, transparent, transparent 2px, #3CA1D9 2px, #3CA1D9 4px);
+}
+.username h1:before {left: 0;}
+.username h1:after {right: 0;}
+
+
+
+.purchasePage {
+	margin-top:25px;
+	margin-left: 5px;
+	margin-right: 5px;
+	list-style: none;
+	counter-reset: li;
+}
+.purchasePage li {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+	flex-wrap: wrap;
+	position: relative;
+	margin-bottom: 1.5em;
+	border: 3px solid #CADFCF;
+	padding: 0.6em;
+	border-radius: 4px;
+	background: #FEFEFE;
+	color: #231F20;
+	font-family: "Trebuchet MS", "Lucida Sans";
+}
+.purchasePage li:before {
+	position: absolute;
+	top: -0.7em;
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #DCC24B;
+	background: #FEFEFE;
+	border-radius: 50%;
+	counter-increment: li;
+	content: counter(li);
+}
+
+.purchaseProduct {
+	position: relative;
+    overflow: hidden;
+    z-index: 1;
+	padding: 10px 40px;
+	margin: 0 20px;
+	font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 600;
+    line-height: 30px;
+    color: white;
+    font-size: 15px;    
+    text-transform: uppercase;
+	background: #2F4F4F;
+	border-width: 0;
+    box-shadow: 5px 5px 0 #90806A;
+	outline: none;
+	cursor: pointer;
+    transition: 1.5s;
+}
+.purchaseProduct:before,
+.purchaseProduct:after {
+	content: "";
+	position: absolute;  
+    height: 200px;
+    left: -50%;
+    margin-top: -100px;    
+    top: 50%;
+    width: 200px;
+	border-radius: 50%;
+    opacity: 0.3;
+    z-index: -1;
+    transform: scale(0);
+}
+.purchaseProduct:before {
+	background: #ffeede;   
+    transition: .8s ease-out;
+}
+.purchaseProduct:after {   
+    transition: .4s ease-in .3s;
+}
+.purchaseProduct:hover {
+    color: #532831;
+}
+.purchaseProduct:hover:before,
+.purchaseProduct:hover:after{
+    opacity: 1;
+    transform: scale(4);
+}
