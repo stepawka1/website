@@ -19,7 +19,7 @@
       </div>
         <div id = 'main_center'>
            <div class = 'ps'>
-              <script >genPage('<%out.print(session.getAttribute("username"));%>')</script>
+              <script >genPage()</script>
             </div>
         </div>
         <div id = 'main_right'>
